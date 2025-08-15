@@ -1,6 +1,10 @@
 ## Hi there 👋
 <img src="https://i.pinimg.com/originals/28/41/b2/2841b23f29296bf4e7c86017b8270ec9.gif" width="100%">
-
+<div align="center">
+<a href="https://buymeacoffee.com/datawithanish" target="_blank" >
+  <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamZoNnNkNjNucGI3YmhsZGVqcmtocnZ0NTNkN3FmYzQ2NGZybTNpYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/513lZvPf6khjIQFibF/giphy.gif" width="30%">
+</a>
+</div>
 ---
 
 ### 🚀 Quick Links
