@@ -1,5 +1,11 @@
 ## Hi there 👋
-<img src="https://i.pinimg.com/originals/28/41/b2/2841b23f29296bf4e7c86017b8270ec9.gif" width="100%">
+### 📈 my github stats
+
+![Anish's GitHub stats](https://github-readme-stats.vercel.app/api?username=DataWithAnish&show_icons=true)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DataWithAnish&layout=compact)
+![GitHub Streak](https://streak-stats.demolab.com?user=DataWithAnish)
+
+
 <div align="center">
 <a href="https://buymeacoffee.com/datawithanish" target="_blank" >
   <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamZoNnNkNjNucGI3YmhsZGVqcmtocnZ0NTNkN3FmYzQ2NGZybTNpYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/513lZvPf6khjIQFibF/giphy.gif" width="30%">
@@ -18,9 +24,13 @@
 ---
 
 ### ✨ About Me
-Hi, I’m **Anish Shrestha** — a passionate **AI & ML Developer**, **Data Scientist**, and **Computer Vision Enthusiast** obsessed with **YOLO** and real-time detection systems.  
-<div align="center">
-  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG04aDdnbDgxdGNodHRsYm8zeTA0YjkwaDZmM2NpZ3I5am9qaTU5YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YknAouVrcbkiDvWUOR/giphy.gif" alt="Banner" width="40%">
+Hi, I’m **Anish Shrestha** — a passionate **AI & ML Developer**, **Data Scientist**, and **Computer Vision Enthusiast** obsessed with **YOLO** and real-time detection systems. 
+****
+<div align="left">
+<img src="https://i.pinimg.com/originals/28/41/b2/2841b23f29296bf4e7c86017b8270ec9.gif" width="40%">
+
+ <br>
+  <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG04aDdnbDgxdGNodHRsYm8zeTA0YjkwaDZmM2NpZ3I5am9qaTU5YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YknAouVrcbkiDvWUOR/giphy.gif" alt="Banner" width="30%">
 </div>
 
 💡 I started this GitHub to **properly document my overflowing ideas**.  
