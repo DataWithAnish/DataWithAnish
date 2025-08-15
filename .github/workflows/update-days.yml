@@ -14,7 +14,7 @@ jobs:
 
       - name: Calculate Days
         run: |
-          START_DATE="2025-01-01"
+          START_DATE="2025-08-07"
           TODAY=$(date +%Y-%m-%d)
           DAYS=$(( ( $(date -d "$TODAY" +%s) - $(date -d "$START_DATE" +%s) ) / 86400 ))
           sed -i "s/{{DAYS_ON_GITHUB}}/${DAYS}/g" README.md
