@@ -1,6 +1,6 @@
 ## Hi there 👋
 ### 📈 my github stats
-I have been on GitHub for **{{DAYS_ON_GITHUB}} days** 🚀
+I have been on GitHub for **8 days** 🚀
 
 
 ![Anish's GitHub stats](https://github-readme-stats.vercel.app/api?username=DataWithAnish&show_icons=true)
