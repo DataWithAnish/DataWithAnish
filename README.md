@@ -1,5 +1,7 @@
 ## Hi there 👋
 ### 📈 my github stats
+I have been on GitHub for **{{DAYS_ON_GITHUB}} days** 🚀
+
 
 ![Anish's GitHub stats](https://github-readme-stats.vercel.app/api?username=DataWithAnish&show_icons=true)
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DataWithAnish&layout=compact)
@@ -11,6 +13,7 @@
   <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamZoNnNkNjNucGI3YmhsZGVqcmtocnZ0NTNkN3FmYzQ2NGZybTNpYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/513lZvPf6khjIQFibF/giphy.gif" width="30%">
 </a>
 </div>
+<img src="https://i.pinimg.com/originals/ca/26/2e/ca262e0354eea311c41134c3e4bc3bc2.gif" width="100%">
 ---
 
 ### 🚀 Quick Links
@@ -48,8 +51,8 @@ Hi, I’m **Anish Shrestha** — a passionate **AI & ML Developer**, **Data Scie
 
 ---
 
-### 🖼 "Data is Future"
-<img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3c2VmNXYweXgxdTQxYW8yYmRqcXhvcm9zb2RncHBjb3plaHcxZWkyaiZlcD12MV9naWZzX3JlbGF0ZWQmY3Q9Zw/l3vRcrVqhBVSpJte0/giphy.gif" alt="Data is Future" width="100%" height ="50%">
+###  "Data makes me crazy"
+<img src="https://i.pinimg.com/originals/ce/13/d8/ce13d8fa9d17ec31e7b80934f46f8f6f.gif" alt="Data is Future" width="100%" height ="50%">
 
 ---
 
