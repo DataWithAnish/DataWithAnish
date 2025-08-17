@@ -24,7 +24,6 @@ jobs:
           # Replace the placeholder in README
           sed -i "s/\*\*[0-9]\+ awesome days\*\*/**${DAYS} awesome days**/g" README.md
 
-
       - name: Commit and push if changed
         run: |
           git config user.name "github-actions[bot]"
