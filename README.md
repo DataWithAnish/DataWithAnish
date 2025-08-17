@@ -12,9 +12,12 @@
 > [(auto-refreshes 🔄)](https://medium.com/@anishkumar.shrestha07/how-to-make-your-github-profile-readme-cool-with-an-automatic-day-counter-using-github-workflows-9677df86b121 "How I built this counter — read the blog")
 
 
-
+<div align="center">
+  
 ![Anish's GitHub stats](https://github-readme-stats.vercel.app/api?username=DataWithAnish&show_icons=true)
 ![GitHub Streak](https://streak-stats.demolab.com?user=DataWithAnish)
+
+</div>
 <div align="center">
   
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DataWithAnish&layout=compact)
