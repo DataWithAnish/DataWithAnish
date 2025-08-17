@@ -1,6 +1,6 @@
 ## Hi there 👋
 ### 📈 my github stats
-I have been on GitHub for **11 days** 🚀
+📅 It’s been **11 awesome days** since I joined GitHub ✨ *(auto-refreshes 🚀)*
 
 
 ![Anish's GitHub stats](https://github-readme-stats.vercel.app/api?username=DataWithAnish&show_icons=true)
