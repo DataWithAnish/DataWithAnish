@@ -1,13 +1,25 @@
 <img src="https://github.com/DataWithAnish/DataWithAnish/blob/main/your%20search%20ends%20here.png" width = "100%">
 
-## Hi there 
-###  My github stats
-It’s been **11 awesome days** since I joined GitHub  [(auto-refreshes )](https://medium.com/@anishkumar.shrestha07/how-to-make-your-github-profile-readme-cool-with-an-automatic-day-counter-using-github-workflows-9677df86b121 "How I built this counter — read the blog")
+<div align="center">
+
+## 👋 Hi there, welcome to my GitHub!  
+
+### 📊 My GitHub Stats  
+
+</div>
+
+> 🗓️ It’s been **11 awesome days** since I joined GitHub 🚀  
+> [(auto-refreshes 🔄)](https://medium.com/@anishkumar.shrestha07/how-to-make-your-github-profile-readme-cool-with-an-automatic-day-counter-using-github-workflows-9677df86b121 "How I built this counter — read the blog")
+
 
 
 ![Anish's GitHub stats](https://github-readme-stats.vercel.app/api?username=DataWithAnish&show_icons=true)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DataWithAnish&layout=compact)
 ![GitHub Streak](https://streak-stats.demolab.com?user=DataWithAnish)
+<div align="center">
+  
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=DataWithAnish&layout=compact)
+
+</div>
 
 
 <div align="center">
@@ -31,10 +43,9 @@ It’s been **11 awesome days** since I joined GitHub  [(auto-refreshes )](https
 ###  About Me
 Hi, I’m **Anish Shrestha** — a passionate **AI & ML Developer**, **Data Scientist**, and **Computer Vision Enthusiast** obsessed with **YOLO** and real-time detection systems. 
 ****
-<div align="left">
-<img src="https://i.pinimg.com/originals/28/41/b2/2841b23f29296bf4e7c86017b8270ec9.gif" width="40%">
-
- <br>
+<div align="center">
+<img src="https://i.pinimg.com/originals/28/41/b2/2841b23f29296bf4e7c86017b8270ec9.gif" width="40%" >
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
   <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG04aDdnbDgxdGNodHRsYm8zeTA0YjkwaDZmM2NpZ3I5am9qaTU5YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YknAouVrcbkiDvWUOR/giphy.gif" alt="Banner" width="30%">
 </div>
 
