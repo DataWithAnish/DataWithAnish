@@ -1,6 +1,6 @@
-## Hi there 👋
-### 📈 my github stats
-📅 It’s been **11 awesome days** since I joined GitHub ✨ [(auto-refreshes 🚀)](https://medium.com/@anishkumar.shrestha07/how-to-make-your-github-profile-readme-cool-with-an-automatic-day-counter-using-github-workflows-9677df86b121 "How I built this counter — read the blog")
+## Hi there 
+###  my github stats
+It’s been **11 awesome days** since I joined GitHub  [(auto-refreshes )](https://medium.com/@anishkumar.shrestha07/how-to-make-your-github-profile-readme-cool-with-an-automatic-day-counter-using-github-workflows-9677df86b121 "How I built this counter — read the blog")
 
 
 ![Anish's GitHub stats](https://github-readme-stats.vercel.app/api?username=DataWithAnish&show_icons=true)
@@ -16,7 +16,7 @@
 <img src="https://i.pinimg.com/originals/ca/26/2e/ca262e0354eea311c41134c3e4bc3bc2.gif" width="100%">
 ---
 
-### 🚀 Quick Links
+###  Quick Links
 [![Streamlit](https://img.shields.io/badge/Streamlit-Online%20Demo-brightgreen?logo=streamlit)](#)
 [![Kaggle Dataset](https://img.shields.io/badge/Dataset-Kaggle-blue?logo=kaggle)](#)
 [![Medium Blog](https://img.shields.io/badge/Medium-Read%20Blog-02b875?logo=medium&logoColor=white)](https://medium.com/@anishkumar.shrestha07/building-a-plant-disease-detection-system-my-experience-managing-and-developing-with-yolov12-on-01ec31ba1ed6)
@@ -26,7 +26,7 @@
 
 ---
 
-### ✨ About Me
+###  About Me
 Hi, I’m **Anish Shrestha** — a passionate **AI & ML Developer**, **Data Scientist**, and **Computer Vision Enthusiast** obsessed with **YOLO** and real-time detection systems. 
 ****
 <div align="left">
@@ -36,8 +36,8 @@ Hi, I’m **Anish Shrestha** — a passionate **AI & ML Developer**, **Data Scie
   <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG04aDdnbDgxdGNodHRsYm8zeTA0YjkwaDZmM2NpZ3I5am9qaTU5YiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/YknAouVrcbkiDvWUOR/giphy.gif" alt="Banner" width="30%">
 </div>
 
-💡 I started this GitHub to **properly document my overflowing ideas**.  
-📌 My journey in AI/ML is just getting started, but I’ve already worked on:  
+I started this GitHub to **properly document my overflowing ideas**.  
+My journey in AI/ML is just getting started, but I’ve already worked on:  
 - <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG9wZTRiOXlub2RpNGVycWZ5YmtrNGdhOGV0cHppNXd1Z2xnYzN0eSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/VGo6rWE1toDmw/giphy.gif" width="40" /> Goat detection & goat behavior analysis (CNN + LSTM)  
  
 - <img src="https://media.giphy.com/media/v1.Y2lkPWVjZjA1ZTQ3NGZvbzYyd2QwcDUycWl3d2NibDd4OWUybHZ5M3N5bDNsM2pzN2w5dCZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/WL8nUUHGl23bzyzA67/giphy.gif" width="60" /> Snake detection  
@@ -47,7 +47,7 @@ Hi, I’m **Anish Shrestha** — a passionate **AI & ML Developer**, **Data Scie
 - <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHZ3cGd2dXFldGIzZHZ6NmJkdHoxbWI1eHJvbnp3eDVza3FvYXk1cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/BCuhVJrGxNNsSCHglI/giphy.gif" width="60"/> Web extensions  
 *(Some projects can’t be uploaded due to data privacy.)*  
 
-🔭 Now, I’m on a mission to document everything, experiment more, and push my limits.
+Now, I’m on a mission to document everything, experiment more, and push my limits.
 
 ---
 
