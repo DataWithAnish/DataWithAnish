@@ -19,10 +19,11 @@ jobs:
         run: |
           START_DATE="2025-08-07" # Change to your join date
           TODAY=$(date +%Y-%m-%d)
-          DAYS=$(( ( $(date -d "$TODAY" +%s) - $(date -d "$START_DATE" +%s) ) / 86400 ))
+          DAYS=$(( ( $(date -d "$TODAY" +%s) - $(date -d "$START_DATE" +%s) ) / 86400 + 1 ))
 
           # Replace the placeholder in README
-          sed -i "s/{{DAYS_ON_GITHUB}}/${DAYS}/g" README.md
+          sed -i "s/\*\*[0-9]\+ days\*\*/**${DAYS} days**/g" README.md
+
 
       - name: Commit and push if changed
         run: |
