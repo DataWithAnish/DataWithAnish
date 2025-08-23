@@ -228,7 +228,6 @@
 })();
 </script>
 
-
 <script type="module">
   import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
   import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
@@ -238,11 +237,11 @@
   const cameraEye = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 2000);
   cameraEye.position.z = 600;
   
-  const rendererEye = new THREE.WebGLRenderer({ alpha:true });
+  const rendererEye = new THREE.WebGLRenderer({ alpha:true, antialias:true });
   rendererEye.setSize(window.innerWidth, window.innerHeight);
   document.getElementById("containerEye").appendChild(rendererEye.domElement);
   
-  let mouseX = window.innerWidth/2, mouseY = window.innerHeight/2;
+  let pointerX = window.innerWidth/2, pointerY = window.innerHeight/2;
   let eyeObject;
   
   // Load eye model
@@ -268,47 +267,32 @@
   const ambientLight = new THREE.AmbientLight(0x333333, 1);
   sceneEye.add(ambientLight);
   
-  // Animate function
+  // Animate
   function animateEye(){
     requestAnimationFrame(animateEye);
   
     if(eyeObject){
-      // Desktop mouse rotation
-      eyeObject.rotation.y = -3 + mouseX / window.innerWidth * 3;
-      eyeObject.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
+      // Eye rotates based on pointer position (mouse or touch)
+      eyeObject.rotation.y = -3 + pointerX / window.innerWidth * 3;
+      eyeObject.rotation.x = -1.2 + pointerY * 2.5 / window.innerHeight;
     }
   
     rendererEye.render(sceneEye, cameraEye);
   }
   animateEye();
   
-  // Mouse move
-  document.onmousemove = (e)=>{
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-  };
+  // 🖱️ Desktop mouse tracking
+  document.addEventListener("mousemove", (e)=>{
+    pointerX = e.clientX;
+    pointerY = e.clientY;
+  });
   
-  // Mobile gyroscope
-  if (window.DeviceOrientationEvent) {
-    function handleOrientation(event) {
-      if (eyeObject) {
-        eyeObject.rotation.x = THREE.MathUtils.degToRad(event.beta/2 || 0);
-        eyeObject.rotation.y = THREE.MathUtils.degToRad(event.gamma/2 || 0);
-      }
-    }
-  
-    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
-      DeviceOrientationEvent.requestPermission()
-        .then(permissionState => {
-          if (permissionState === 'granted') {
-            window.addEventListener('deviceorientation', handleOrientation);
-          }
-        })
-        .catch(console.error);
-    } else {
-      window.addEventListener('deviceorientation', handleOrientation);
-    }
-  }
+  // 📱 Mobile touch tracking
+  document.addEventListener("touchmove", (e)=>{
+    const touch = e.touches[0];
+    pointerX = touch.clientX;
+    pointerY = touch.clientY;
+  }, { passive: true });
   
   // Resize
   window.addEventListener('resize', ()=>{
@@ -316,7 +300,8 @@
     cameraEye.updateProjectionMatrix();
     rendererEye.setSize(window.innerWidth, window.innerHeight);
   });
-  </script>
+</script>
+
 
 </body>
 </html>
