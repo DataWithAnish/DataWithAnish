@@ -26,7 +26,7 @@
     transform: translateX(-50%);
     width: 90%;
     max-width: 900px;
-    background: #00000008;
+    background: hsla(0, 0%, 0%, 0);
     padding: 20px;
     border-radius: 15px;
     backdrop-filter: blur(5px);
@@ -231,67 +231,93 @@
 
 
 <script type="module">
-import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
-import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
-
-// Eye Scene
-const sceneEye = new THREE.Scene();
-const cameraEye = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 2000);
-cameraEye.position.z = 600;
-
-const rendererEye = new THREE.WebGLRenderer({ alpha:true });
-rendererEye.setSize(window.innerWidth, window.innerHeight);
-document.getElementById("containerEye").appendChild(rendererEye.domElement);
-
-let mouseX = window.innerWidth/2, mouseY = window.innerHeight/2;
-let eyeObject;
-
-const loader = new GLTFLoader();
-loader.load(
-  './eye_free_model_3d_by_oscar_creativo/scene.gltf',
-  function(gltf){
-    eyeObject = gltf.scene;
-    eyeObject.scale.set(0.8, 0.8, 0.8); // smaller eye
-    eyeObject.position.set(0, 0, 0);
-    sceneEye.add(eyeObject);
-    console.log("Eye model loaded:", eyeObject);
-  },
-  function(xhr){
-    console.log((xhr.loaded / xhr.total * 100) + '% loaded');
-  },
-  function(err){
-    console.error(err);
-  }
-);
-
-const topLight = new THREE.DirectionalLight(0xffffff, 1);
-topLight.position.set(500, 500, 500);
-sceneEye.add(topLight);
-
-const ambientLight = new THREE.AmbientLight(0x333333, 1);
-sceneEye.add(ambientLight);
-
-function animateEye(){
-  requestAnimationFrame(animateEye);
-  if(eyeObject){
-    eyeObject.rotation.y = -3 + mouseX / window.innerWidth * 3;
-    eyeObject.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
-  }
-  rendererEye.render(sceneEye, cameraEye);
-}
-animateEye();
-
-window.addEventListener('resize', ()=>{
-  cameraEye.aspect = window.innerWidth/window.innerHeight;
-  cameraEye.updateProjectionMatrix();
+  import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
+  import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
+  
+  // Scene
+  const sceneEye = new THREE.Scene();
+  const cameraEye = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 2000);
+  cameraEye.position.z = 600;
+  
+  const rendererEye = new THREE.WebGLRenderer({ alpha:true });
   rendererEye.setSize(window.innerWidth, window.innerHeight);
-});
-
-document.onmousemove = (e)=>{
-  mouseX = e.clientX;
-  mouseY = e.clientY;
-};
-</script>
+  document.getElementById("containerEye").appendChild(rendererEye.domElement);
+  
+  let mouseX = window.innerWidth/2, mouseY = window.innerHeight/2;
+  let eyeObject;
+  
+  // Load eye model
+  const loader = new GLTFLoader();
+  loader.load(
+    './eye_free_model_3d_by_oscar_creativo/scene.gltf',
+    function(gltf){
+      eyeObject = gltf.scene;
+      eyeObject.scale.set(0.9, 0.9, 0.9); // smaller eye
+      eyeObject.position.set(0, 0, 0);
+      sceneEye.add(eyeObject);
+      console.log("Eye model loaded:", eyeObject);
+    },
+    function(xhr){ console.log((xhr.loaded / xhr.total * 100) + '% loaded'); },
+    function(err){ console.error(err); }
+  );
+  
+  // Lights
+  const topLight = new THREE.DirectionalLight(0xffffff, 1);
+  topLight.position.set(500, 500, 500);
+  sceneEye.add(topLight);
+  
+  const ambientLight = new THREE.AmbientLight(0x333333, 1);
+  sceneEye.add(ambientLight);
+  
+  // Animate function
+  function animateEye(){
+    requestAnimationFrame(animateEye);
+  
+    if(eyeObject){
+      // Desktop mouse rotation
+      eyeObject.rotation.y = -3 + mouseX / window.innerWidth * 3;
+      eyeObject.rotation.x = -1.2 + mouseY * 2.5 / window.innerHeight;
+    }
+  
+    rendererEye.render(sceneEye, cameraEye);
+  }
+  animateEye();
+  
+  // Mouse move
+  document.onmousemove = (e)=>{
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+  };
+  
+  // Mobile gyroscope
+  if (window.DeviceOrientationEvent) {
+    function handleOrientation(event) {
+      if (eyeObject) {
+        eyeObject.rotation.x = THREE.MathUtils.degToRad(event.beta/2 || 0);
+        eyeObject.rotation.y = THREE.MathUtils.degToRad(event.gamma/2 || 0);
+      }
+    }
+  
+    if (typeof DeviceOrientationEvent.requestPermission === 'function') {
+      DeviceOrientationEvent.requestPermission()
+        .then(permissionState => {
+          if (permissionState === 'granted') {
+            window.addEventListener('deviceorientation', handleOrientation);
+          }
+        })
+        .catch(console.error);
+    } else {
+      window.addEventListener('deviceorientation', handleOrientation);
+    }
+  }
+  
+  // Resize
+  window.addEventListener('resize', ()=>{
+    cameraEye.aspect = window.innerWidth/window.innerHeight;
+    cameraEye.updateProjectionMatrix();
+    rendererEye.setSize(window.innerWidth, window.innerHeight);
+  });
+  </script>
 
 </body>
 </html>
