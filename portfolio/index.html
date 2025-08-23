@@ -1,103 +1,147 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Data With Anish</title>
-  <style>
-    /* Basic Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
-    }
-
-    body {
-      background: #f0f2f5;
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: #4a90e2;
-      color: #fff;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2em;
-      opacity: 0.9;
-    }
-
-    main {
-      max-width: 900px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    .card {
-      background: #fff;
-      padding: 20px 30px;
-      margin-bottom: 20px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 12px 25px rgba(0,0,0,0.15);
-    }
-
-    h2 {
-      color: #4a90e2;
-      margin-bottom: 10px;
-    }
-
-    p {
-      color: #555;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-      color: #777;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Data With Anish - 3D Portfolio</title>
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow-x: hidden;
+    background: #0e0e0e;
+    color: #fff;
+  }
+  #bgCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+  header {
+    text-align: center;
+    padding: 60px 20px;
+  }
+  header h1 {
+    font-size: 3rem;
+    color: #00ffe0;
+  }
+  header p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    margin-top: 10px;
+  }
+  .section {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,255,224,0.2);
+    backdrop-filter: blur(5px);
+    transition: transform 0.2s ease;
+  }
+  .section:hover {
+    transform: translateY(-10px);
+  }
+  h2 {
+    color: #00ffe0;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  p {
+    color: #ccc;
+    line-height: 1.6;
+  }
+  .gif-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .gif-row img {
+    width: 150px;
+    border-radius: 10px;
+  }
+  footer {
+    text-align: center;
+    padding: 30px;
+    color: #777;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Hello 👋 This is Anish's Portfolio!</h1>
-    <p>Data Science | Object Detection | Python | AI Projects</p>
-  </header>
 
-  <main>
-    <div class="card">
-      <h2>About Me</h2>
-      <p>Hi! I'm Anish Kumar Shrestha, a Data Science student passionate about AI, machine learning, and creative applications like object detection and computer vision projects.</p>
-    </div>
+<canvas id="bgCanvas"></canvas>
 
-    <div class="card">
-      <h2>Projects</h2>
-      <p>Some of my projects include Goat Detection, Snake Species Classification, PPE Detection, Plant Disease Detection, and more. I enjoy building solutions that combine AI with real-world applications.</p>
-    </div>
+<header>
+  <h1>👋 Hello, I’m Anish Shrestha</h1>
+  <p>Data Scientist | AI & ML Developer | Computer Vision Enthusiast</p>
+</header>
 
-    <div class="card">
-      <h2>Contact</h2>
-      <p>You can reach me at <a href="mailto:anish@example.com">anish@example.com</a> or connect via LinkedIn/Twitter.</p>
-    </div>
-  </main>
+<section class="section">
+  <h2>About Me</h2>
+  <p>I’m passionate about AI, ML, and real-time object detection. I work with YOLO, TensorFlow, PyTorch, and OpenCV to build real-world projects like goat detection, snake classification, and web extensions.</p>
+  <div class="gif-row">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG9wZTRiOXlub2RpNGVycWZ5YmtrNGdhOGV0cHppNXd1Z2xnYzN0eSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/VGo6rWE1toDmw/giphy.gif">
+    <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeG9wZTRiOXlub2RpNGVycWZ5YmtrNGdhOGV0cHppNXd1Z2xnYzN0eSZlcD12MV9zdGlja2Vyc19zZWFyY2gmY3Q9cw/WL8nUUHGl23bzyzA67/giphy.gif">
+  </div>
+</section>
 
-  <footer>
-    &copy; 2025 Anish Kumar Shrestha. All rights reserved.
-  </footer>
+<section class="section">
+  <h2>Projects</h2>
+  <div class="gif-row">
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbHNrY2Z0aWZoaTc4bGozaHM5OGI4dW9pY2lvNjZiNDJibzMzZnJpcCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/P2bzIHWYeinYAMfeWe/giphy.gif">
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZHZ3cGd2dXFldGIzZHZ6NmJkdHoxbWI1eHJvbnp3eDVza3FvYXk1cSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/BCuhVJrGxNNsSCHglI/giphy.gif">
+  </div>
+</section>
+
+<footer>
+  ⭐ Documenting ideas today to create solutions tomorrow. <br>
+  &copy; 2025 Anish Kumar Shrestha
+</footer>
+
+<!-- Three.js -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+<script>
+const canvas = document.getElementById('bgCanvas');
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({canvas: canvas, alpha: true});
+renderer.setSize(window.innerWidth, window.innerHeight);
+
+const geometry = new THREE.BufferGeometry();
+const particleCount = 1000;
+const positions = [];
+for(let i=0;i<particleCount*3;i++){
+  positions.push((Math.random()-0.5)*200, (Math.random()-0.5)*200, (Math.random()-0.5)*200);
+}
+geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions,3));
+
+const material = new THREE.PointsMaterial({color: 0x00ffe0, size: 1.5});
+const particles = new THREE.Points(geometry, material);
+scene.add(particles);
+
+camera.position.z = 100;
+
+function animate(){
+  requestAnimationFrame(animate);
+  particles.rotation.y += 0.001;
+  particles.rotation.x += 0.001;
+  renderer.render(scene, camera);
+}
+animate();
+
+window.addEventListener('resize',()=>{
+  camera.aspect = window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+
 </body>
 </html>
