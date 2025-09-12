@@ -1,224 +1,308 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portfolio with 3D Eye</title>
-<style>
-  body, html {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background: #0a0a0a;
-    font-family: Arial, sans-serif;
-    color: #fff;
-  }
-
-  canvas {
-    display: block;
-  }
-
-  /* Banner overlay */
-  #banner {
-    position: absolute;
-    top: 50px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
-    max-width: 900px;
-    background: hsla(0, 0%, 0%, 0);
-    padding: 20px;
-    border-radius: 15px;
-    text-align: center;
-    overflow-y: auto;
-    max-height: 80%;
-    z-index: 2;
-  }
-
-  #banner img {
-    max-width: 100%;
-    border-radius: 10px;
-  }
-
-  #banner a {
-    color: #1e90ff;
-    text-decoration: none;
-  }
-
-  #banner a:hover {
-    text-decoration: underline;
-  }
-
-  h2, h3 {
-    margin: 10px 0;
-  }
-
-  /* Container for the 3D eye */
-  #containerEye {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 1; /* behind banner */
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anish Shrestha | AI/ML Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-black text-white overflow-x-hidden">
+    <!-- 3D Background Elements -->
+    <canvas id="bgCanvas" class="fixed top-0 left-0 w-full h-full -z-10"></canvas>
+    <div id="containerEye" class="fixed top-0 left-0 w-full h-full -z-10"></div>
 
-<canvas id="bgCanvas"></canvas>
-<div id="containerEye"></div>
+    <!-- Main Content -->
+    <div class="relative z-10">
+        <!-- Hero Section -->
+        <section class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
+            <div class="glass-card p-8 max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Anish Shrestha</span>
+                </h1>
+                <h2 class="text-xl sm:text-2xl md:text-3xl mb-8">AI/ML Developer & Computer Vision Enthusiast</h2>
+                <div class="flex justify-center space-x-4">
+                    <a href="#about" class="px-6 py-3 bg-blue-600 hover:bg-blue-700 rounded-full transition">About Me</a>
+                    <a href="#projects" class="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-full transition">My Projects</a>
+                </div>
+            </div>
+        </section>
 
+        <!-- About Section -->
+        <section id="about" class="py-20 px-4 sm:px-6 lg:px-8 parallax" style="background-image: url('https://static.photos/technology/1200x630/42');">
+            <div class="max-w-6xl mx-auto">
+                <div class="glass-card p-8 md:p-12" data-aos="fade-right">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-8 gradient-text">About Me</h2>
+                    <div class="grid md:grid-cols-2 gap-8 items-center">
+                        <div>
+                            <p class="text-lg mb-6">Hi, I'm <span class="font-bold">Anish Shrestha</span> — a passionate <span class="font-bold">AI & ML Developer</span>, <span class="font-bold">Data Scientist</span>, and <span class="font-bold">Computer Vision Enthusiast</span> obsessed with <span class="font-bold">YOLO</span> and real-time detection systems.</p>
+                            <p class="text-lg mb-6">I started this GitHub to <span class="font-bold">properly document my overflowing ideas</span>. My journey in AI/ML is just getting started, but I've already worked on:</p>
+                            <ul class="space-y-3">
+                                <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-green-400"></i> Goat detection & goat behavior analysis (CNN + LSTM)</li>
+                                <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-green-400"></i> Snake detection</li>
+                                <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-green-400"></i> Image segmentation</li>
+                                <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-green-400"></i> Face recognition</li>
+                                <li class="flex items-center"><i data-feather="check-circle" class="mr-2 text-green-400"></i> Web extensions</li>
+                            </ul>
+                        </div>
+                        <div class="flex justify-center">
+                            <img src="https://github.com/DataWithAnish/DataWithAnish/blob/main/your%20search%20ends%20here.png" alt="Anish Shrestha" class="rounded-lg shadow-2xl max-w-full h-auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Stats Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-900/50 to-purple-900/50">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center gradient-text">My GitHub Stats</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="glass-card p-6 text-center" data-aos="zoom-in">
+                        <div class="text-4xl font-bold mb-2">21+</div>
+                        <div class="text-lg">Days on GitHub</div>
+                    </div>
+                    <div class="glass-card p-6 text-center" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="text-4xl font-bold mb-2">10+</div>
+                        <div class="text-lg">Projects</div>
+                    </div>
+                    <div class="glass-card p-6 text-center" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="text-4xl font-bold mb-2">5+</div>
+                        <div class="text-lg">Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 parallax" style="background-image: url('https://static.photos/abstract/1200x630/13');">
+            <div class="max-w-6xl mx-auto">
+                <div class="glass-card p-8 md:p-12" data-aos="fade-left">
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-8 gradient-text">My Projects</h2>
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-gray-900/50 p-6 rounded-xl">
+                            <h3 class="text-xl font-bold mb-4">Plant Disease Detection</h3>
+                            <p class="mb-4">Built with YOLO for real-time plant disease identification.</p>
+                            <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
+                                <i data-feather="external-link" class="mr-2"></i> View on Medium
+                            </a>
+                        </div>
+                        <div class="bg-gray-900/50 p-6 rounded-xl">
+                            <h3 class="text-xl font-bold mb-4">Goat Behavior Analysis</h3>
+                            <p class="mb-4">CNN + LSTM model for analyzing goat behavior patterns.</p>
+                            <a href="#" class="text-blue-400 hover:text-blue-300 flex items-center">
+                                <i data-feather="github" class="mr-2"></i> View on GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
-<script>
-(() => { // IIFE to isolate scope
-  // Starfield setup
-  const canvas = document.getElementById('bgCanvas');
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 8000);
-  camera.position.z = 800;
+        <!-- Contact Section -->
+        <section class="py-20 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-3xl sm:text-4xl font-bold mb-8 gradient-text">Let's Connect</h2>
+                <div class="flex justify-center space-x-4 mb-8">
+                    <a href="#" class="p-3 bg-blue-600 hover:bg-blue-700 rounded-full transition">
+                        <i data-feather="linkedin"></i>
+                    </a>
+                    <a href="#" class="p-3 bg-purple-600 hover:bg-purple-700 rounded-full transition">
+                        <i data-feather="github"></i>
+                    </a>
+                    <a href="#" class="p-3 bg-pink-600 hover:bg-pink-700 rounded-full transition">
+                        <i data-feather="mail"></i>
+                    </a>
+                </div>
+                <p class="text-lg">"Documenting ideas today to create solutions tomorrow."</p>
+            </div>
+        </section>
+    </div>
 
-  const renderer = new THREE.WebGLRenderer({canvas: canvas, alpha:true});
-  renderer.setSize(window.innerWidth, window.innerHeight);
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/three@0.153.0/build/three.min.js"></script>
+    <script>
+        // Starfield setup
+        (() => {
+            const canvas = document.getElementById('bgCanvas');
+            const scene = new THREE.Scene();
+            const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 8000);
+            camera.position.z = 800;
 
-  // Starfield geometry
-  const starTexture = new THREE.TextureLoader().load('https://threejs.org/examples/textures/sprites/disc.png');
-  const particleCount = 2000;
-  const geometry = new THREE.BufferGeometry();
-  const positions = [];
-  const colors = [];
-  const sizes = [];
+            const renderer = new THREE.WebGLRenderer({canvas: canvas, alpha:true});
+            renderer.setSize(window.innerWidth, window.innerHeight);
 
-  for (let i = 0; i < particleCount; i++) {
-    positions.push(
-        (Math.random()-0.5)*2000, // ⬅️ reduced spread
-        (Math.random()-0.5)*2000, 
-        (Math.random()-0.5)*2000
-      );
-      const colorRand = Math.random();
-      if(colorRand < 0.6) colors.push(1,1,1);
-      else if(colorRand < 0.75) colors.push(1, 0.85, 0.5);
-      else if(colorRand < 0.85) colors.push(1,0.5,0);
-      else colors.push(0.5,0.7,1);
-      sizes.push(Math.random()*5 + 1);
-  }
+            // Starfield geometry
+            const starTexture = new THREE.TextureLoader().load('https://threejs.org/examples/textures/sprites/disc.png');
+            const particleCount = 2000;
+            const geometry = new THREE.BufferGeometry();
+            const positions = [];
+            const colors = [];
+            const sizes = [];
 
-  geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
-  geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
-  geometry.setAttribute('size', new THREE.Float32BufferAttribute(sizes, 1));
+            for (let i = 0; i < particleCount; i++) {
+                positions.push(
+                    (Math.random()-0.5)*2000,
+                    (Math.random()-0.5)*2000, 
+                    (Math.random()-0.5)*2000
+                );
+                const colorRand = Math.random();
+                if(colorRand < 0.6) colors.push(1,1,1);
+                else if(colorRand < 0.75) colors.push(1, 0.85, 0.5);
+                else if(colorRand < 0.85) colors.push(1,0.5,0);
+                else colors.push(0.5,0.7,1);
+                sizes.push(Math.random()*5 + 1);
+            }
 
-  const material = new THREE.PointsMaterial({
-      vertexColors: true,
-      size: 4,
-      map: starTexture,
-      transparent: true,
-      blending: THREE.AdditiveBlending,
-      depthWrite: false
-  });
+            geometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+            geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
+            geometry.setAttribute('size', new THREE.Float32BufferAttribute(sizes, 1));
 
-  const stars = new THREE.Points(geometry, material);
-  scene.add(stars);
+            const material = new THREE.PointsMaterial({
+                vertexColors: true,
+                size: 4,
+                map: starTexture,
+                transparent: true,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false
+            });
 
-  // Use unique variable names for mouse
-  let starMouseX = 0, starMouseY = 0;
-  document.addEventListener('mousemove', e => {
-      starMouseX = (e.clientX - window.innerWidth/2)/50;
-      starMouseY = (e.clientY - window.innerHeight/2)/50;
-  });
+            const stars = new THREE.Points(geometry, material);
+            scene.add(stars);
 
-  function animateStars() {
-      requestAnimationFrame(animateStars);
-      stars.rotation.y += 0.001 + starMouseX*0.001;
-      stars.rotation.x += 0.001 + starMouseY*0.001;
-      renderer.render(scene, camera);
-  }
-  animateStars();
+            let starMouseX = 0, starMouseY = 0;
+            document.addEventListener('mousemove', e => {
+                starMouseX = (e.clientX - window.innerWidth/2)/50;
+                starMouseY = (e.clientY - window.innerHeight/2)/50;
+            });
 
-  window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth/window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-  });
-})();
-</script>
+            function animateStars() {
+                requestAnimationFrame(animateStars);
+                stars.rotation.y += 0.001 + starMouseX*0.001;
+                stars.rotation.x += 0.001 + starMouseY*0.001;
+                renderer.render(scene, camera);
+            }
+            animateStars();
 
-<script type="module">
-  import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
-  import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
-  
-  // Scene
-  const sceneEye = new THREE.Scene();
-  const cameraEye = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 2000);
-  cameraEye.position.z = 600;
-  
-  const rendererEye = new THREE.WebGLRenderer({ alpha:true, antialias:true });
-  rendererEye.setSize(window.innerWidth, window.innerHeight);
-  document.getElementById("containerEye").appendChild(rendererEye.domElement);
-  
-  let pointerX = window.innerWidth/2, pointerY = window.innerHeight/2;
-  let eyeObject;
-  
-  // Load eye model
-  const loader = new GLTFLoader();
-  loader.load(
-    './eye_free_model_3d_by_oscar_creativo/scene.gltf',
-    function(gltf){
-      eyeObject = gltf.scene;
-      eyeObject.scale.set(0.9, 0.9, 0.9); // smaller eye
-      eyeObject.position.set(0, 0, 0);
-      sceneEye.add(eyeObject);
-      console.log("Eye model loaded:", eyeObject);
-    },
-    function(xhr){ console.log((xhr.loaded / xhr.total * 100) + '% loaded'); },
-    function(err){ console.error(err); }
-  );
-  
-  // Lights
-  const topLight = new THREE.DirectionalLight(0xffffff, 1);
-  topLight.position.set(500, 500, 500);
-  sceneEye.add(topLight);
-  
-  const ambientLight = new THREE.AmbientLight(0x333333, 1);
-  sceneEye.add(ambientLight);
-  
-  // Animate
-  function animateEye(){
-    requestAnimationFrame(animateEye);
-  
-    if(eyeObject){
-      // Eye rotates based on pointer position (mouse or touch)
-      eyeObject.rotation.y = -3 + pointerX / window.innerWidth * 3;
-      eyeObject.rotation.x = -1.2 + pointerY * 2.5 / window.innerHeight;
-    }
-  
-    rendererEye.render(sceneEye, cameraEye);
-  }
-  animateEye();
-  
-  // 🖱️ Desktop mouse tracking
-  document.addEventListener("mousemove", (e)=>{
-    pointerX = e.clientX;
-    pointerY = e.clientY;
-  });
-  
-  // 📱 Mobile touch tracking
-  document.addEventListener("touchmove", (e)=>{
-    const touch = e.touches[0];
-    pointerX = touch.clientX;
-    pointerY = touch.clientY;
-  }, { passive: true });
-  
-  // Resize
-  window.addEventListener('resize', ()=>{
-    cameraEye.aspect = window.innerWidth/window.innerHeight;
-    cameraEye.updateProjectionMatrix();
-    rendererEye.setSize(window.innerWidth, window.innerHeight);
-  });
-</script>
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth/window.innerHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        })();
+    </script>
 
+    <script type="module">
+        import * as THREE from "https://cdn.skypack.dev/three@0.129.0/build/three.module.js";
+        import { GLTFLoader } from "https://cdn.skypack.dev/three@0.129.0/examples/jsm/loaders/GLTFLoader.js";
+        
+        // Scene
+        const sceneEye = new THREE.Scene();
+        const cameraEye = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 2000);
+        cameraEye.position.z = 600;
+        
+        const rendererEye = new THREE.WebGLRenderer({ alpha:true, antialias:true });
+        rendererEye.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById("containerEye").appendChild(rendererEye.domElement);
+        
+        let pointerX = window.innerWidth/2, pointerY = window.innerHeight/2;
+        let eyeObject;
+        
+        // Load eye model
+        const loader = new GLTFLoader();
+        loader.load(
+            './eye_free_model_3d_by_oscar_creativo/scene.gltf',
+            function(gltf){
+                eyeObject = gltf.scene;
+                eyeObject.scale.set(0.9, 0.9, 0.9);
+                eyeObject.position.set(0, 0, 0);
+                sceneEye.add(eyeObject);
+                console.log("Eye model loaded:", eyeObject);
+            },
+            function(xhr){ console.log((xhr.loaded / xhr.total * 100) + '% loaded'); },
+            function(err){ console.error(err); }
+        );
+        
+        // Lights
+        const topLight = new THREE.DirectionalLight(0xffffff, 1);
+        topLight.position.set(500, 500, 500);
+        sceneEye.add(topLight);
+        
+        const ambientLight = new THREE.AmbientLight(0x333333, 1);
+        sceneEye.add(ambientLight);
+        
+        // Animate
+        function animateEye(){
+            requestAnimationFrame(animateEye);
+        
+            if(eyeObject){
+                eyeObject.rotation.y = -3 + pointerX / window.innerWidth * 3;
+                eyeObject.rotation.x = -1.2 + pointerY * 2.5 / window.innerHeight;
+            }
+        
+            rendererEye.render(sceneEye, cameraEye);
+        }
+        animateEye();
+        
+        document.addEventListener("mousemove", (e)=>{
+            pointerX = e.clientX;
+            pointerY = e.clientY;
+        });
+        
+        document.addEventListener("touchmove", (e)=>{
+            const touch = e.touches[0];
+            pointerX = touch.clientX;
+            pointerY = touch.clientY;
+        }, { passive: true });
+        
+        window.addEventListener('resize', ()=>{
+            cameraEye.aspect = window.innerWidth/window.innerHeight;
+            cameraEye.updateProjectionMatrix();
+            rendererEye.setSize(window.innerWidth, window.innerHeight);
+        });
+    </script>
 
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        feather.replace();
+        
+        // Parallax effect
+        document.addEventListener('scroll', function() {
+            const scrollPosition = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax');
+            
+            parallaxElements.forEach(function(element) {
+                element.style.backgroundPositionY = scrollPosition * 0.5 + 'px';
+            });
+        });
+    </script>
 </body>
 </html>
