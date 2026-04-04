@@ -10,7 +10,7 @@
 
 </div>
 
-> 🗓️ It’s been **240 awesome days** since I joined GitHub 🚀  
+> 🗓️ It’s been **241 awesome days** since I joined GitHub 🚀  
 > [(auto-refreshes 🔄)](https://medium.com/@anishkumar.shrestha07/how-to-make-your-github-profile-readme-cool-with-an-automatic-day-counter-using-github-workflows-9677df86b121 "How I built this counter — read the blog")
 
 
